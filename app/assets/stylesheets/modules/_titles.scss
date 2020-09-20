@@ -51,6 +51,7 @@
     background-color: #FFEFD5;
   }
   &__list{
+    overflow: auto;
     height: calc(100vh - 100px);
     background-color:  #b3a98c;
     padding:0px 20px 0px 20px;
@@ -88,6 +89,7 @@
     }
   }
   &__title__volume-list{
+    overflow: auto;
     height: calc(100vh - 100px - 200px - 90px);
     width: calc(100vw - 250px - 250px);
     background-color: #ffffff;
@@ -117,6 +119,7 @@
     }
   }
   &__title__comment-list{
+    overflow: auto;
     height: 200px;
     width: calc(100vw - 250px - 250px);
     background-color: #f9f9f9;
