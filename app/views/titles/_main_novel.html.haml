@@ -1,0 +1,34 @@
+.main_novel
+  .main_novel__info
+    .main_novel__info__title-name
+      タイトル名
+    .main_novel__info__btn
+      = link_to '#', class: "btn" do
+        = "Delete"
+      = link_to '#', class: "btn" do
+        = "Edit"
+  .main_novel__title__volume-list
+    .volume-btn
+      = link_to '#', class: "btn" do
+        = "投稿"
+    .volume-list
+      .volum-index
+        .volume-name
+          タイトル名
+        .volume-date
+          日時
+  .main_novel__title__comment-list
+    .comment-list
+      .comment-index
+        .comment-name
+          ユーザー名
+        .volume-date
+          日時
+      .volume-content
+        メッセージ
+  .main_novel__title__comment-send
+    .form
+      %form.new-comment
+        .input-box
+        %input{type: "text", placeholder: "type a comment" , class: "input-box__text"}  
+      %input{type: "submit", class: "submit-btn"}
