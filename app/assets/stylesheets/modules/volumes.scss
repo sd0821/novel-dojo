@@ -1,0 +1,36 @@
+.form-volume{
+  .new-volume{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 0 20px 0;
+    .input-box{
+      &__text{
+        width: 500px;
+        margin-bottom: 10px;
+        padding: 15px;
+        border: 1px solid black;
+        display: block;
+      }
+      &__content{
+        width: 500px;
+        height: 500px;
+        margin-bottom: 10px;
+        padding: 15px;
+        border: 1px solid black;
+        display: block;
+      }
+      .submit-btn{
+        display: block;
+        width: 200px;
+        margin-top: 30px;
+        padding: 15px;
+        border: 0;
+        background-color: #c90926;
+        color: white;
+      }
+    }
+  }
+}
