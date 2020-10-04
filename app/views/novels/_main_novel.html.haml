@@ -1,7 +1,7 @@
 .main_novel
   .main_novel__info
     .main_novel__info__title-name
-      タイトル名
+      = "ジオンの蒼き獅子"
     .main_novel__info__btn
       = link_to '#', class: "btn" do
         = "Delete"
@@ -12,20 +12,34 @@
       = link_to '#', class: "btn" do
         = "投稿"
     .volume-list
-      .volum-index
-        .volume-name
-          タイトル名
+      .volume-index
+        = link_to "#" do
+          .volume-name
+            = "第01話：帰還者"
         .volume-date
-          日時
+          = "2020年07月19日"
+      .volume-index
+        = link_to "#" do
+          .volume-name
+            = "第02話：コロニー落とし"
+        .volume-date
+          = "2020年07月25日"
   .main_novel__title__comment-list
     .comment-list
       .comment-index
         .comment-name
-          ユーザー名
+          投稿者名
         .volume-date
-          日時
+          = "2020年07月23日"
       .volume-content
-        メッセージ
+        = "単純に面白い。本家をリスペクトしている所を感じるのが尚良いです。"
+      .comment-index
+        .comment-name
+          投稿者名
+        .volume-date
+          = "2020年07月25日"
+      .volume-content
+        = "パクリですね、同じような二次創作を見たことがあります。"
   .main_novel__title__comment-send
     .form
       %form.new-comment
