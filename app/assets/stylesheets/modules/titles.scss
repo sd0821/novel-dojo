@@ -1,10 +1,14 @@
 .title-name{
+  margin: 0px 60px;
+  background-color: #FFEFD5;
   display: flex;
   justify-content: center;
   font-size: 40px;
-  color: red;
+  color:black;
+  border-radius: 20px;
 }
 .form-title{
+  margin-top: 60px;
   .new-title{
     width: 600px;
     display: flex;
