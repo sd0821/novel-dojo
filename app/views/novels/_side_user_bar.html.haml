@@ -4,15 +4,15 @@
       .top_items__name
         = current_user.name
       .top_items__icon
-        = link_to '#' , class: "icons-btn" do
+        = link_to new_title_path, class: "icons-btn" do
           = icon('fas', 'pen-nib')
-        = link_to edit_user_path(current_user) , class: "icons-btn" do
+        = link_to edit_user_path(current_user), class: "icons-btn" do
           = icon('fas', 'user-edit')
   .Side_bar__users-title
-    .users-title-list
-      = link_to "#" do
-        .title-list-name
-          = "ジオンの蒼き獅子"
+    -# .users-title-list
+    -#   = link_to "#" do
+    -#     .title-list-name
+    -#       = "ジオンの蒼き獅子"
     .users-title-list
       = link_to "#" do
         .title-list-name
