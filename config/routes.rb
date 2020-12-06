@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   resources :users, only: [:edit, :update]
 
   root "novels#index"
-  resources :titles, only: [:new, :create]
+  resources :titles, only: [:new, :create] do
+    resources :volumes, only: [:index, :new, :create, :show]
+  end
+
   # root "volumes#new"
 end

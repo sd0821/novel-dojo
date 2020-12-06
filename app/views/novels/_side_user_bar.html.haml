@@ -11,6 +11,6 @@
   .Side_bar__users-title
     - current_user.titles.each do |title|
       .users-title-list
-        = link_to "#" do
+        = link_to title_volumes_path(title) do
           .title-list-name
             = title.name
