@@ -2,8 +2,9 @@
   .all_titles__case
     全投稿小説一覧
   .all_titles__list
-    .title-list-name
-      = link_to "#" do
-        .list-name
-          = "ほんの少し思い出してもらうだけの話"
+    - @titles.each do |titles|
+      .title-list-name
+        = link_to "#" do
+          .list-name
+            = titles.name
  
