@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_06_045351) do
+ActiveRecord::Schema.define(version: 2020_12_06_073541) do
 
   create_table "novels", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -40,5 +40,18 @@ ActiveRecord::Schema.define(version: 2020_12_06_045351) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "volumes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "title_id", null: false
+    t.string "name", null: false
+    t.text "content", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["title_id"], name: "index_volumes_on_title_id"
+    t.index ["user_id"], name: "index_volumes_on_user_id"
+  end
+
   add_foreign_key "titles", "users"
+  add_foreign_key "volumes", "titles"
+  add_foreign_key "volumes", "users"
 end
