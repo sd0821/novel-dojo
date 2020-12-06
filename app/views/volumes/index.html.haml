@@ -9,21 +9,15 @@
         = "Edit"
   .main_novel__title__volume-list
     .volume-btn
-      = link_to new_title_volume_path class: "btn" do
-        = "投稿"
+      = link_to "投稿", new_title_volume_path, class: "btn"
+  - @volumes.each do |volumes|
     .volume-list
       .volume-index
-        = link_to "#" do
+        = link_to title_volume_path(volumes.id, @title) do
           .volume-name
-            = "第01話：帰還者"
+            = volumes.name
         .volume-date
-          = "2020年07月19日"
-      .volume-index
-        = link_to "#" do
-          .volume-name
-            = "第02話：コロニー落とし"
-        .volume-date
-          = "2020年07月25日"
+          = volumes.created_at.strftime("%Y年%m月%d日 %H時%M分")
   .main_novel__title__comment-list
     .comment-list
       .comment-index
