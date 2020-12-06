@@ -2,7 +2,8 @@ class VolumesController < ApplicationController
   before_action :set_title
 
   def index
-    @volumes = @title.volumes.includes(:user)
+    @volumes = Volume.all
+    # @volumes = @title.volumes.includes(:user)
   end
 
   def new
@@ -22,6 +23,8 @@ class VolumesController < ApplicationController
   end
 
   def show
+    @volume = Volume.new
+    # @volumes = @title.volumes.includes(:user)
   end
 
   private
