@@ -3,21 +3,20 @@
     .main_novel__info__title-name
       = @title.name
     .main_novel__info__btn
-      = link_to '#', class: "btn" do
-        = "Delete"
-      = link_to '#', class: "btn" do
-        = "Edit"
+      = link_to "Top", root_path, class: "btn"
+      = link_to "Delete", title_path(@title.id), method: :delete, class: "btn"
+      = link_to "Edit", edit_title_path(@title.id), class: "btn"
   .main_novel__title__volume-list
     .volume-btn
       = link_to "投稿", new_title_volume_path, class: "btn"
-  - @volumes.each do |volumes|
     .volume-list
-      .volume-index
-        = link_to title_volume_path(volumes.id, @title) do
-          .volume-name
-            = volumes.name
-        .volume-date
-          = volumes.created_at.strftime("%Y年%m月%d日 %H時%M分")
+      - @volumes.each do |volumes|
+        .volume-index
+          = link_to title_volume_path(@title, volumes.id) do
+            .volume-name
+              = volumes.name
+          .volume-date
+            = volumes.created_at.strftime("%Y年%m月%d日 %H時%M分")
   .main_novel__title__comment-list
     .comment-list
       .comment-index

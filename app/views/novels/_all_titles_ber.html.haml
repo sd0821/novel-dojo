@@ -2,8 +2,8 @@
   .all_titles__case
     全投稿小説一覧
   .all_titles__list
-    - @titles.each do |titles|
+    - @titles.each do |title|
       .title-list-name
-        = link_to "#" do
+        = link_to title_volumes_path(title) do
           .list-name
-            = titles.name
+            = title.name
