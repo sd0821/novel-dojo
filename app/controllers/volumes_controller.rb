@@ -1,9 +1,10 @@
 class VolumesController < ApplicationController
+  # before_action :set_volume, only: [:show]
   before_action :set_title
 
   def index
-    @volumes = Volume.all
-    # @volumes = @title.volumes.includes(:user)
+    @volumes = @title.volumes.includes(:user)
+    # binding.pry
   end
 
   def new
@@ -23,8 +24,11 @@ class VolumesController < ApplicationController
   end
 
   def show
-    @volume = Volume.new
+    # @volumes = Volume.find(params[:title_id])
     # @volumes = @title.volumes.includes(:user)
+    # @volumes = Volume.all
+    @volume = Volume.find(params[:id])
+    # @volume
   end
 
   private
@@ -36,5 +40,8 @@ class VolumesController < ApplicationController
     @title = Title.find(params[:title_id])
   end
 
+  # def set_volume
+  #   @volume = Volume.find(params[:id])
+  # end
 
 end

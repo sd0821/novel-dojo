@@ -1,6 +1,6 @@
 %h1.title-name= "タイトル名変更"
 .form-title
-  %form.new-title
+  = form_with model: @title, html:{class: "new-title"}, local: true do |f|
     .input-box
-    %input{type: "text", placeholder: "type a title" , class: "input-box__text"}  
-    %input{type: "submit", class: "submit-btn"}
+    = f.text_field "name", placeholder: "type a title", class: "input-box__text"  
+    = f.submit "送信", class: "submit-btn"
