@@ -1,5 +1,6 @@
 class VolumesController < ApplicationController
-  # before_action :set_volume, only: [:show]
+  before_action :edit_volume, only: [:edit, :update]
+  before_action :destroy_volume, only: [:destroy]
   before_action :set_title
 
   def index
@@ -23,12 +24,23 @@ class VolumesController < ApplicationController
   def edit
   end
 
-  def show
-    # @volumes = Volume.find(params[:title_id])
-    # @volumes = @title.volumes.includes(:user)
-    # @volumes = Volume.all
+  def update
     @volume = Volume.find(params[:id])
-    # @volume
+    if @volume.update(volume_params)
+      redirect_to title_volumes_path(@title)
+    else
+      render :edit
+    end
+  end
+
+  def show
+    @volume = Volume.find(params[:id])
+  end
+
+  def destroy
+    if @volume.destroy
+      redirect_to title_volumes_path(@title) 
+    end
   end
 
   private
@@ -40,8 +52,12 @@ class VolumesController < ApplicationController
     @title = Title.find(params[:title_id])
   end
 
-  # def set_volume
-  #   @volume = Volume.find(params[:id])
-  # end
+  def edit_volume
+    @volume = Volume.find(params[:id])
+  end
+
+  def destroy_volume
+    @volume = Volume.find(params[:id])
+  end
 
 end
