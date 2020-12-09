@@ -1,7 +1,7 @@
 %h1.volume-title= "本編編集"
 .form-volume
-  %form.new-volume
+  = form_with model: [@title, @volume], html:{class: "new-volume"}, local: true do |f|
     .input-box
-    %input{type: "text", placeholder: "type a volume-name" , class: "input-box__text"}
-    %textarea{placeholder: "type a volume" , class: "input-box__content"}
-    %input{type: "submit", class: "submit-btn"}
+    = f.text_field :name, placeholder: "type a volume-name" , class: "input-box__text"
+    = f.text_area :content, placeholder: "type a volume" , class: "input-box__content"
+    = f.submit "Send", class: "send-btn"
