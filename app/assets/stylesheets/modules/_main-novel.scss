@@ -105,27 +105,27 @@
     border-bottom-right-radius: 20px;
     .form{
       padding: 20px 40px;
-      display: flex;
       .new-comment{
         width: 100%;
+        display: flex;
         .input-box{
           &__text{
             height: 50px;
-            width: 100%;
+            width: 750px;
             padding: 0px 45px 0px 15px;
             border: none;
           }
         }
-      }
-      .submit-btn{
-        width: 100px;
-        height: 50px;
-        margin-left: 15px;
-        padding: 0px 30px;
-        border: 1px solid #38aef0;
-        color:#38aef0;
-        font-size: 16px;
-        border: none;
+        .submit-btn{
+          width: 100px;
+          height: 50px;
+          margin-left: 15px;
+          padding: 0px 30px;
+          border: 1px solid #38aef0;
+          color:#38aef0;
+          font-size: 16px;
+          border: none;
+        }
       }
     }
   }

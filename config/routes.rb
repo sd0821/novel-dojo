@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   root "novels#index"
   resources :titles, only: [:new, :create, :edit, :update, :destroy] do
     resources :volumes, only: [:index, :new, :create, :show, :edit, :update, :destroy]
+    resources :comments, only: [:index, :create]
   end
 
-  # root "volumes#new"
+
 end

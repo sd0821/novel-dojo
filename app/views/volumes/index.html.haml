@@ -12,30 +12,10 @@
     .volume-list
       - @volumes.each do |volumes|
         .volume-index
-          = link_to title_volume_path(@title, volumes.id) do
+          = link_to title_volume_path(@title.id, volumes.id) do
             .volume-name
               = volumes.name
           .volume-date
             = volumes.created_at.strftime("%Y年%m月%d日 %H時%M分")
-  .main_novel__title__comment-list
-    .comment-list
-      .comment-index
-        .comment-name
-          投稿者名
-        .volume-date
-          = "2020年07月23日"
-      .volume-content
-        = "単純に面白い。本家をリスペクトしている所を感じるのが尚良いです。"
-      .comment-index
-        .comment-name
-          投稿者名
-        .volume-date
-          = "2020年07月25日"
-      .volume-content
-        = "パクリですね、同じような二次創作を見たことがあります。"
-  .main_novel__title__comment-send
-    .form
-      %form.new-comment
-        .input-box
-        %input{type: "text", placeholder: "type a comment" , class: "input-box__text"}  
-      %input{type: "submit", class: "submit-btn"}
+    .main_novel__info__btn
+      = link_to "Impressions / evaluations", title_comments_path(@title.id), class: "btn"
