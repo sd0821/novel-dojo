@@ -1,0 +1,24 @@
+.main_novel
+  .main_novel__info
+    .main_novel__info__title-name
+      = @title.name
+    .main_novel__info__btn
+      = link_to "Top", root_path, class: "btn"
+      = link_to "Index", title_volumes_path(@title), class: "btn"
+
+  .main_novel__title__comment-list
+    .comment-list
+      - @comments.each do |comment|
+        .comment-index
+          .comment-name
+            = comment.user.name
+          .volume-date
+            = comment.created_at.strftime("%Y年%m月%d日 %H時%M分")
+        .volume-content
+          = comment.comment
+  .main_novel__title__comment-send
+    .form
+      = form_with model: [@title, @comment], html:{class: "new-comment"}, local: true do |f|
+        .input-box
+          = f.text_field :comment, placeholder: "type a comment" , class: "input-box__text"
+        = f.submit "Send", class: "submit-btn"
