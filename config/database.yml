@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: novel_dojo_production
-  username: novel_dojo
-  password: <%= ENV['NOVEL_DOJO_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
