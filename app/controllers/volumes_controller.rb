@@ -5,7 +5,6 @@ class VolumesController < ApplicationController
 
   def index
     @volumes = @title.volumes.includes(:user)
-    # binding.pry
   end
 
   def new

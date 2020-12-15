@@ -21,17 +21,21 @@
         width: 500px;
         margin-bottom: 10px;
         padding: 15px;
-        border: 1px solid black;
+        // border: 1px solid black;
         display: block;
+        font-size: 20px;
       }
       &__content{
         overflow: auto;
-        width: 600px;
+        width: 800px;
         height: 600px;
         margin-bottom: 10px;
         padding: 15px;
-        border: 1px solid black;
+        // border: 1px solid black;
         display: block;
+        white-space: pre-wrap;
+        font-size: 15px;
+        line-height: 40px
       }
       .submit-btn{
         display: block;
