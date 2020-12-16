@@ -1,6 +1,6 @@
 class Comment < ApplicationRecord
   belongs_to :title, optional: true
-  has_one :user, through: :title
+  belongs_to :user
 
   validates :comment, presence: true
 end
