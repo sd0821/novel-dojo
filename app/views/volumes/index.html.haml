@@ -4,11 +4,13 @@
       = @title.name
     .main_novel__info__btn
       = link_to "Top", root_path, class: "btn"
-      = link_to "Delete", title_path(@title.id), method: :delete, class: "btn"
-      = link_to "Edit", edit_title_path(@title.id), class: "btn"
+      -if user_signed_in? && current_user.id == @title.user_id 
+        = link_to "Delete", title_path(@title.id), method: :delete, class: "btn"
+        = link_to "Edit", edit_title_path(@title.id), class: "btn"
   .main_novel__title__volume-list
     .volume-btn
-      = link_to "投稿", new_title_volume_path, class: "btn"
+      -if user_signed_in? && current_user.id == @title.user_id 
+        = link_to "投稿", new_title_volume_path, class: "btn"
     .volume-list
       - @volumes.each do |volumes|
         .volume-index
@@ -18,4 +20,5 @@
           .volume-date
             = volumes.created_at.strftime("%Y年%m月%d日 %H時%M分")
     .main_novel__info__btn
-      = link_to "Impressions / evaluations", title_comments_path(@title.id), class: "btn"
+      .form
+        = link_to "感想", title_comments_path(@title.id), class: "btn"
