@@ -8,6 +8,6 @@ class User < ApplicationRecord
   validates :name, presence: true, uniqueness: true
   has_many :titles
   has_many :volumes, through: :titles
-  has_many :comments, through: :titles
+  has_many :comments
   
 end
