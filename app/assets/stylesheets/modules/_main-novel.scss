@@ -1,11 +1,12 @@
 .main_novel{
-  margin-right: 50px;
-  margin-left: 30px;
-  height: 100vh;
-  width: calc(100vw - 250px - 250px);
+  padding-top: 20px;
+  text-align: left;
+  width: 950px;
+  border: 1px solid #202032;
+  margin: 0 auto;
+  height: calc(612px - 90px);
   &__info{
     height: 100px;
-    width: calc(100vw - 250px - 250px);
     background-color: #FFEFD5;
     display: flex;
     justify-content: space-between;
@@ -31,8 +32,6 @@
   }
   &__title__volume-list{
     overflow: auto;
-    height: calc(100vh - 100px - 200px - 90px);
-    width: calc(100vw - 250px - 250px);
     background-color: #ffffff;
     .volume-btn{
       .btn{
@@ -71,8 +70,7 @@
   }
   &__title__comment-list{
     overflow: auto;
-    height: 200px;
-    width: calc(100vw - 250px - 250px);
+    height: 400px;
     background-color: #f9f9f9;
     border-top: 1px solid #999;
     padding: 20px;
@@ -98,7 +96,7 @@
   }
   &__title__comment-send{
     height: 90px;
-    width: calc(100vw - 250px - 250px);
+    width: 950px;
     background-color: #d2d2d2;
     border-top: 1px solid #999;
     border-bottom-left-radius: 20px;
@@ -121,10 +119,10 @@
           height: 50px;
           margin-left: 15px;
           padding: 0px 30px;
-          border: 1px solid #38aef0;
-          color:#38aef0;
+          background-color: #c90926;
+          color: white;
           font-size: 16px;
-          border: none;
+          border: 0;
         }
       }
     }

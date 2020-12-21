@@ -2,9 +2,26 @@
   box-sizing: border-box;
 }
 
-.wrapper{
-  display: flex;
+.main-header{
+  height: 98px;
+  background-color: #202032;
+  color: #fafafa;
+  text-align: left;
+  width: 950px;
+  border: 1px solid #202032;
+  margin: 0 auto;
+  font-size: 40px;
 }
+
+.wrapper{
+  text-align: left;
+  width: 950px;
+  border: 1px solid #202032;
+  margin: 0 auto;
+  display: flex;
+  padding-top: 20px;
+}
+
 
 .Side_bar{
   margin-right: 30px;
@@ -18,14 +35,21 @@
     border-radius: 20%;
     .top_items{
       &__name{
-        font-size: 16px;
+        font-size: 20px;
       }
       &__icon{
         display: flex;
         flex-direction: column;
         font-size: 1.5em;
+        text-decoration: none;
         .icons-btn{
           color: black;
+          display: flex;
+          text-decoration: none;
+          .icons-name{
+            font-size: 16px;
+            text-decoration: none;
+          } 
         }
       }
     }

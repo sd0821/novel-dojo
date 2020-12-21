@@ -1,38 +1,46 @@
 .title-name{
-  margin: 0px 60px;
+  width: 950px;
+  margin: 0 auto;
   background-color: #FFEFD5;
   display: flex;
   justify-content: center;
   font-size: 40px;
   color:black;
-  border-radius: 20px;
+  border-radius: 20px 20px 0px 0px;
+  text-align: left;
+  border: 1px solid #202032;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 .form-title{
-  margin-top: 60px;
+  border: 1px solid #202032;
+  height: 300px;
+  width: 950px;
+  margin: 0 auto;
   .new-title{
     width: 600px;
     display: flex;
     align-items: center;
     flex-direction: column;
     margin: 0 auto;
-    padding: 0 0 20px 0;
+    padding-top: 20px;
     .input-box{
       &__text{
-        width: 500px;
-        margin-bottom: 10px;
+        width: 700px;
+        margin-bottom: 20px;
         padding: 15px;
         border: 1px solid black;
         display: block;
       }
-      .submit-btn{
-        display: block;
-        width: 200px;
-        margin-top: 30px;
-        padding: 15px;
-        border: 0;
-        background-color: #c90926;
-        color: white;
-      }
+    }
+    .submit-btn{
+      display: block;
+      width: 200px;
+      margin-top: 30px;
+      padding: 15px;
+      border: 0;
+      background-color: #c90926;
+      color: white;
     }
   }
 }

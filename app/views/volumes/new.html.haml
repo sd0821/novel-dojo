@@ -1,8 +1,9 @@
+.main-header
+  = "NOVEL-DOJO"
 %h1.volume-title= "本編投稿"
 .form-volume
   = form_with model: [@title, @volume], html:{class: "new-volume"}, local: true do |f|
     .input-box
     = f.text_field :name, placeholder: "type a volume-name" , class: "input-box__text"
     = f.text_area :content, placeholder: "type a volume" , class: "input-box__content"
-    = f.submit "Send", class: "send-btn"
-
+    = f.submit "Send", class: "submit-btn"
