@@ -6,8 +6,12 @@
       .top_items__icon
         = link_to new_title_path, class: "icons-btn" do
           = icon('fas', 'pen-nib')
+          %span<>
+            .icons-name 小説タイトル名設定
         = link_to edit_user_path(current_user), class: "icons-btn" do
           = icon('fas', 'user-edit')
+          %span<>
+            .icons-name ユーザー変更
   .Side_bar__users-title
     - current_user.titles.each do |title|
       .users-title-list

@@ -1,27 +1,30 @@
 .volume-title{
-  margin: 0px 60px;
   background-color: #FFEFD5;
   display: flex;
   justify-content: center;
   font-size: 40px;
   color:black;
-  border-radius: 20px;
+  border-radius: 20px 20px 0px 0px;
+  border: 1px solid #202032;
+  width: 950px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 .form-volume{
-  margin-top: 20px;
+  margin: 0 auto;
   .new-volume{
     width: 600px;
     display: flex;
     align-items: center;
     flex-direction: column;
     margin: 0 auto;
-    padding: 0 0 20px 0;
+    padding-top: 20px;
     .input-box{
       &__text{
         width: 500px;
         margin-bottom: 10px;
         padding: 15px;
-        // border: 1px solid black;
         display: block;
         font-size: 20px;
       }
@@ -31,27 +34,26 @@
         height: 600px;
         margin-bottom: 10px;
         padding: 15px;
-        // border: 1px solid black;
         display: block;
         white-space: pre-wrap;
         font-size: 15px;
         line-height: 40px
       }
-      .submit-btn{
-        display: block;
-        width: 200px;
-        margin-top: 30px;
-        padding: 15px;
-        border: 0;
-        background-color: #c90926;
-        color: white;
-      }
+    }
+    .submit-btn{
+      display: block;
+      width: 200px;
+      margin-top: 10px;
+      padding: 15px;
+      border: 0;
+      background-color: #c90926;
+      color: white;
     }
   }
 }
 .volume__btn{
   display: flex;
-  margin-left: 1050px;
+  margin-left: 880px;
   .btn{
     display: block;
     line-height: 40px;
@@ -63,3 +65,4 @@
     border-radius: 20%
   }
 }
+

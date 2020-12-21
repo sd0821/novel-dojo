@@ -1,6 +1,8 @@
+.main-header
+  = "NOVEL-DOJO"
 %h1.title-name= "タイトル名変更"
 .form-title
   = form_with model: @title, html:{class: "new-title"}, local: true do |f|
     .input-box
     = f.text_field "name", placeholder: "type a title", class: "input-box__text"  
-    = f.submit "送信", class: "submit-btn"
+    = f.submit "Send", class: "submit-btn"

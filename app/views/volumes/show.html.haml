@@ -1,5 +1,6 @@
+.main-header
+  = "NOVEL-DOJO"
 %h1.volume-title= "本編"
--# %if= user_signed_in? && current_user.id == @volume.user_id
 .volume__btn
   = link_to "Top", root_path, class: "btn"
   = link_to "Index", title_volumes_path(@title), class: "btn"
