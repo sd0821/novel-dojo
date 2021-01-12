@@ -26,7 +26,6 @@
 ![ログイン画面](https://i.gyazo.com/235b4b7a433a8dbd210f749c4f7a5977.png)  
 ユーザー登録を行います。  
 
-
 ![ホーム画面](https://i.gyazo.com/b42495c8f52cb77f71bedf6e7e858d9d.png)  
 ホーム画面です。  
 ユーザー変更・小説のタイトル設定のボタンがあります。  
